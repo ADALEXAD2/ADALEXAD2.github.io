@@ -1,0 +1,213 @@
+    /**
+    * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+    * http://cssreset.com
+    */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+    display: block;
+    }
+    body {
+    line-height: 1;
+    }
+    ol, ul {
+    list-style: none;
+    }
+    blockquote, q {
+    quotes: none;
+    }
+    blockquote::before, blockquote::after,
+    q::before, q::after {
+    content: '';
+    content: none;
+    }
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+/*                    Reset file ends       */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+
+
+.clearfix::before, .clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+body{
+    font-family: fantasy;
+    line-height: 1.34;
+}
+
+header {
+	background-color: #82CCE2;
+	font-size: 20px;
+    overflow: hidden;
+}
+
+header li a {
+    display: block;
+    position: relative;
+	text-decoration: none;
+    padding: 10px 20px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: #68B0C6;
+    transition: background-color 250ms ease-in-out, border 500ms ease-in-out;
+    overflow: hidden;
+}
+
+header a:hover {
+    transition: 300ms ease-in;
+    color: yellow;
+    text-shadow: 5px 5px 5px black;
+}
+
+
+header img {
+	width: 20%;
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    padding: 10px;
+}
+
+header li {
+	display: inline-block;
+	width: 25%;
+	float: left;
+	text-align: center;
+	padding: 13px 0px 16px 0px;
+}
+
+.hero {
+	background-color: #B82AD1;
+	height: 500px;
+	background-image: url("../img/sky.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+main {
+	background-color: #D0CBD1;
+    position: relative;
+}
+
+main img {
+    position: absolute;
+    width: 25%;
+    left: 15%;
+    border-radius: 50%;
+    top: 20px;
+    transition: left 450ms ease-in-out;    
+}
+
+main img:hover {
+    left: 5%;
+}
+
+article {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    float: right;
+    background-color: white;
+    padding: 0px 20px 40px 20px;
+    margin-bottom: 60px;
+}
+
+article::before {
+    content: "";
+    background-color: white;
+    display: block;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    background-image: url(../img/mail.png);
+    background-repeat: repeat-x;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+p {
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 20px 0px;
+    text-align: right;
+}
+
+footer {
+	background-color: #605E61;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 18px;
+}
+
+.shine::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229,172,142 0), rgba(255, 255, 255, 0.5), rgba(229,172,142, 0));
+    transform: rotateZ(60deg) translate(-5em, 12em);
+    -webkit-transform: rotateZ(60deg) translate(-5em, 9em);
+
+}
+
+.shine:hover::after, .shine:focus::after {
+    animation: sheen 1s forwards;
+    -webkit-animation: sheen 1s forwards;
+}
+
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em -53m);
+    }
+
+}
+
+@-webkit-keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em -53m);
+    }
+    
+}

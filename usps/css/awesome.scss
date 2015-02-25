@@ -1,0 +1,15 @@
+$color: #ED7042;
+
+header {
+	background-color: $color;
+}
+
+main {
+	background-color: complement($color);
+	article {
+		background-color: transparentize(complement($color), .5);
+	}
+	p {
+		color: darken($color, 10);
+	}
+}
